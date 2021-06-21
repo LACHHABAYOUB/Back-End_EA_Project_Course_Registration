@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "62e50802-c30b-45c1-9628-8887feb4c2e1",
+		"name": "EA PROJECT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "All Assigned Courses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/student/assignedCourses/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"assignedCourses",
+								""
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkYW5nIiwicm9sZSI6WyJTVFVERU5UIl0sImV4cCI6MTYyMzI4MTIyMCwiaWF0IjoxNjIzMjYzMjIwfQ.MVzEjsA6T19QGc3gImN9EqpZcNl2LIknThmKIpphATw",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Current Course",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/student/assignedCourses/current",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"assignedCourses",
+								"current"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Past Assigned Courses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/student/assignedCourses/past",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"assignedCourses",
+								"past"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Future Assigned Courses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/student/assignedCourses/future",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"assignedCourses",
+								"future"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My Attendance To Specific Course",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/student/offerings/1/attendance",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"offerings",
+								"1",
+								"attendance"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "General",
+			"item": [
+				{
+					"name": "All Courses Available",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/student/allcourses/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"allcourses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Past Courses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/student/allcourses/past",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"allcourses",
+								"past"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Future Courses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/student/allcourses/future",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"allcourses",
+								"future"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Choose Specific Course",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/student/allcourses/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"allcourses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login Student",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"// pm.environment.set(\"accessToken\", jsonData.accessToken);\r",
+									"// pm.environment.set(\"barcodeId\", jsonData.barcodeId);\r",
+									"\r",
+									"\r",
+									"postman.setEnvironmentVariable(\"accessToken\", jsonData.accessToken);\r",
+									"postman.setEnvironmentVariable(\"barcodeId\", jsonData.barcodeId);"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"dang\",\r\n  \"password\": \"123\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/authentication/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authentication",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BarcodeRecords",
+			"item": [
+				{
+					"name": "Create barcode record",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"locationId\": \"1\",\r\n  \"barcode\": \"{{barcodeId}}\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:8080/barcoderecord",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barcoderecord"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

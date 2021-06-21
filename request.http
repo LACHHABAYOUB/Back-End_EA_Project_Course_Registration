@@ -1,0 +1,154 @@
+### Login
+POST localhost:8080/authentication/login
+Content-Type: application/json
+
+{
+  "username": "dang",
+  "password": "123"
+}
+
+### Register Student
+POST localhost:8080/authentication/register
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkYW5nIiwicm9sZSI6WyJTVFVERU5UIl0sImV4cCI6MTYyMzMxMjI3MSwiaWF0IjoxNjIzMjk0MjcxfQ.mKTBi5K7vc51-CycZxQ-haOIVcpp_6dLCluYD4Kb7cs
+
+{
+  "username": "admin9",
+  "password": "1234",
+  "firstName": "ADMIN",
+  "lastName": "MR",
+  "personRole": "ADMIN"
+}
+
+### Register Student
+POST localhost:8080/authentication/register
+Content-Type: application/json
+
+{
+  "username": "student",
+  "password": "123",
+  "firstName": "dang",
+  "lastName": "nguyen",
+  "personRole": "STUDENT"
+}
+
+### Register Faculty
+POST localhost:8080/authentication/register
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkYW5nIiwicm9sZSI6WyJTVFVERU5UIl0sImV4cCI6MTYyMzMxMjI3MSwiaWF0IjoxNjIzMjk0MjcxfQ.mKTBi5K7vc51-CycZxQ-haOIVcpp_6dLCluYD4Kb7cs
+
+{
+  "username": "faculty",
+  "password": "123",
+  "firstName": "Payman",
+  "lastName": "Salek",
+  "personRole": "FACULTY"
+}
+
+### POST Create barcode record
+POST localhost:8080/barcoderecord
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkYW5nIiwicm9sZSI6WyJTVFVERU5UIl0sImV4cCI6MTYyMzM1OTg2NSwiaWF0IjoxNjIzMzQxODY1fQ.WD2scZuZgKknAzJJ8CL20ZrbJQT3FTIQiDOnlmtil5s
+Content-Type: application/json
+
+{
+  "locationId": "1",
+  "barcode": "71107ae5-5646-4830-9cee-a54978cc2b7d"
+}
+
+### GET Barcode Record
+GET localhost:8080/barcoderecord
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkYW5nIiwicm9sZSI6WyJTVFVERU5UIl0sImV4cCI6MTYyMzExNzAyOCwiaWF0IjoxNjIzMDk5MDI4fQ.2NLzlfjmTeVyQ6UZKYCIoX6t3JIYbVI9nM6PwQ2WcEg
+
+### GET All persons
+GET localhost:8080/admin/persons/
+
+### Admin assigne Role
+### Register Faculty
+PATCH localhost:8080/admin/persons/2/roles
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOlsiQURNSU4iXSwiZXhwIjoxNjIzMzQ3OTk0LCJpYXQiOjE2MjMzMjk5OTR9.MZp74YDScrvqVK20hLUvB-U60LgW0VNR6QPYBnmOp5k
+
+{
+  "roles": [
+    {
+      "role": "student",
+      "properties": {
+        "studentId": "612345"
+      },
+      "active": false
+    },
+    {
+      "role": "personnel",
+      "properties": null,
+      "active": true
+    },
+    {
+      "role": "admin",
+      "properties": null,
+      "active": true
+    }
+  ]
+}
+
+### Get all coures teach by a faculty
+GET localhost:8080/faculty/courses
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdGVsbGF2ZXJhIiwicm9sZSI6WyJGQUNVTFRZIl0sImV4cCI6MTYyMzIyMjgzMywiaWF0IjoxNjIzMjA0ODMzfQ.Zoi6Wtix2W_Oof5AQlH0m9IUnUQJgKDDRyWv-7Mbi44
+
+### attendance
+POST localhost:8080/personnel/attendancev2
+Content-Type: application/json
+
+{
+  "courseOfferId":1,
+  "studentId": 2
+}
+
+### POST - get list of students by keyword
+GET http://localhost:8080/personnel/students/search?keyword=Dang
+
+### POST - get list of couseroffering by StudentId
+GET http://localhost:8080/personnel/students/2/couserofferings
+
+### POST - get list of barcoderecord attendance by StudentId and courseOfferingId
+GET http://localhost:8080/personnel/courseofferings/1/students/2/barcoderecords
+
+### POST - get list of class sessionf and show absent and present status
+GET http://localhost:8080/personnel/courseofferings/1/students/3/attendances
+
+### POST - Create a new atendance for student
+POST http://localhost:8080/personnel/student/barcoderecords
+Content-Type: application/json
+
+{
+  "classSession": {
+    "id": 10,
+    "timeSlot": {
+      "id": 1,
+      "abbreviation": "AM",
+      "beginTime": "10:00:00",
+      "endTime": "12:15:00",
+      "description": "Morning time slot"
+    },
+    "courseOffering": {
+      "id": 1,
+      "course": {
+        "id": 1,
+        "name": "EA",
+        "description": "Enterprise Architecture"
+      },
+      "startDate": "2021-06-03",
+      "endDate": "2021-06-24"
+    },
+    "date": "2021-06-16",
+    "location": {
+      "id": 1,
+      "description": "Room 45C - Verill Hall building"
+    }
+  },
+  "student": {
+    "id": "2",
+    "barcode": "Dang"
+  }
+}
+### Delete - Delete a barcodeRecord so student is not present in the ClassSession
+DELETE http://localhost:8080/personnel/student/4/barcoderecords

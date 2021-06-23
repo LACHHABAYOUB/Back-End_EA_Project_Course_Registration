@@ -1,4 +1,4 @@
-Attendance Checking Software
+# Attendance Checking Software
 
 Attendance Checking Software is back End App for check Meditation Attendance Project
 
@@ -7,12 +7,13 @@ App Build with Spring Framework as Back-End.
 1 Getting Started
 
 1.1 The Goal
-
+```sh
 The goal of this project is to give you hands-on, practical experience with going through all 4 phases of
 SDLC (Software Development Lifecycle) for a real-world project. You will all have a chance to go through
 Inception, Elaboration, Construction and Transition. 
+```
 1.2 Attendance Checking Software
-
+```sh
 We are trying to create a web application that will automate the process of creating attendance reports
 for students, faculty and administrators.
  Students need to be able to login and view the list of courses that they have taken (or are
@@ -26,8 +27,10 @@ records. They should also be able to change any record (manually change an “ab
  Administrators need to be able to login and assign roles. Administrators also have the same
 privileges that personnel have.
  Users of this system can have multiple roles. For example a faculty can also be Personnel! 
-1.3 The Requirements
 
+```
+1.3 The Requirements
+```sh
 The system is based on a bar-code reader (similar to the one in use at the Dalby Hall for morning
 meditations).
  The barcode reader creates a record of each scan by saving the bar-code ID, date, timeslot
@@ -44,8 +47,9 @@ course
  Each course offering also can have multiple sessions
  Each “session” is a timeslot offered at a particular date for a particular course. So each “session”
 record has an ID, Course Offering ID, Timeslot ID and date. 
+```
 2 Prerequisites
-
+```sh
 2.1 Java JDK
 https://www.oracle.com/java/technologies/javase-downloads.html
 
@@ -67,8 +71,12 @@ https://code.visualstudio.com/download
 
 Download MySql:
 https://www.mysql.com/downloads/
-3 Installing
 
+```
+
+
+3 Installing
+```sh
 3.1 Install the required Prerequisites
 
 1- Import the back-end and go to src\main\resources\application.properties
@@ -76,17 +84,21 @@ https://www.mysql.com/downloads/
     spring.datasource.username=YOUR USERNAME
     spring.datasource.password=YOUR PASSWORD
 -After that you can run the project 
-
+```
 4 Project Team
-
+```sh
 Ayoub Lachhab    
 Hai Dang Nguyen  
 Sanjeevan Sigdel
 Gedeon Niyonsenga  
 Alba Elizabeth Padilla Pacheco
+
+```
 5 Duration of work
-
+```sh
 4 days
+```
 6 Copyrights
-
+```sh
 Copyrights Maharishi international university ©2021 All Rights Reserved
+```
